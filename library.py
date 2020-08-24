@@ -27,21 +27,31 @@ while(True):
     print("1.Lend a Book")
     print("1.Add a Book")
     print("1.Return a Book")
-    user_choice = int(input())
+    user_choice = (input())
+    if user_choice not in ['1','2','3','4']:
+        print('please enter a valid option')
+        continue
+    else:
+        user_choice=int(user_choice)
     if user_choice==1:
         harry.displayBook()
     elif user_choice==2:
-        pass
+        book=input("Enter the name of the book you want to lend : ")
+        user=input("Enter your name")
+        harry.LendBook(user,book)
     elif user_choice==3:
-        pass
+        book = input("Enter the name of the book you want to Add : ")
+        harry.addBook(book)
     elif user_choice==4:
-        pass
+        book = input("Enter the name of the book you want to Return : ")
+        harry.returnBook(book)
     else:
         print("Not a valid option")
     print("press Q to quit and C to Continue")
-    
-    user_choice2=input()
-    if user_choice2=='q':
-        exit()
-    if user_choice2=="c"
-        continue
+    user_choice2=""
+    while(user_choice2!="c" and user_choice2!="q"):
+        user_choice2=input()
+        if user_choice2=='q':
+            exit()
+        if user_choice2=="c":
+            continue
